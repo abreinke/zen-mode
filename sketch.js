@@ -7,19 +7,20 @@ function preload (){
 }
 
 function setup() {
-  let cnv = createCanvas(500, 500);
+  createCanvas(500, 500);
   background(0);
-  stroke(237,170,166);
+  stroke(2,119,158);
   strokeWeight(25);
 }
 
 function draw(){
     function mouseMoved() {
       if (mouseX > 200){
-        mySound.play();
+          oceanSound.play();
+          stroke(0,180,255);
       }
       if (mouseX > 400){
-        oceanSound.play();
+          mySound.play();
       }
     }
 }
