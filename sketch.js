@@ -14,10 +14,6 @@ function setup() {
 }
 
 function draw(){
-  if (mouseIsPressed) {
-   line(mouseX, mouseY, pmouseX, pmouseY);
-    return false;
-  }
     function mouseMoved() {
       if (mouseX > 200){
         mySound.play();
