@@ -2,8 +2,8 @@ let mySound;
 let oceanSound;
 function preload (){
   soundFormats('mp3');
-  mySound = loadSound ('sky.mp3');
-  oceanSound = loadSound('sea.mp3');
+  mySound = loadSound ('sea.mp3');
+  oceanSound = loadSound('sky.mp3');
 }
 
 function setup() {
@@ -14,13 +14,15 @@ function setup() {
 }
 
 function draw(){
+  if (mouseIsPressed) {
+      line(width - mouseX, height - mouseY);
+  }
+  return false;
+}
+
     function mouseMoved() {
-      if (mouseX > 200){
+      if (mouseX > 250){
           oceanSound.play();
           stroke(0,180,255);
       }
-      if (mouseX > 400){
-          mySound.play();
-      }
     }
-}
