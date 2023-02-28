@@ -7,8 +7,8 @@ function preload (){
 }
 
 function setup() {
-  createCanvas(500, 500);
-  background(0, 0, 0);
+  let cnv = createCanvas(500, 500);
+  background(0);
   stroke(237,170,166);
   strokeWeight(25);
 }
